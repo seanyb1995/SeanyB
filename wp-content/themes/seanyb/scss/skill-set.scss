@@ -1,0 +1,15 @@
+// skill set
+.skill-set {
+  display: grid;
+  grid-template-columns: 1.5fr 4.5fr 4.5fr 1.5fr;
+  grid-template-rows: auto auto;
+  .sub-heading {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    h3 {
+      font-family: verveine, sans-serif;
+      color: $yellow;
+      font-size: 3.625rem;
+    }
+  }
+}

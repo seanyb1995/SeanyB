@@ -1,0 +1,52 @@
+// header
+// navigation 
+header {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  nav {
+    text-align: right;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 90%;
+      li {
+        display: inline-block;
+        a {
+          position: relative;
+          display: block;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 1.125rem;
+          color: black;
+        }
+      }
+    }
+  }
+  .site-branding {
+    h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+    }
+    h1:first-child {
+      font-family: 'tropical_summer_signatureRg';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 128px !important;
+      color: $yellow;
+      left: 20px;
+      top: 10px;
+    }
+    h1:nth-child(2) {
+      font-family: 'Rock Salt', cursive;
+      left: 72px;
+      top: 45px;
+    }
+  }
+}

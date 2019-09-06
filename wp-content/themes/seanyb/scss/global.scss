@@ -1,0 +1,56 @@
+// global
+
+// font
+
+@import url("https://use.typekit.net/ofx3tcc.css");
+// font-family: 'futura-pt', san-serif;
+// font-family: verveine, sans-serif;
+// font-family: gineso-condensed, sans-serif; 
+
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+// font-family: 'Rock Salt', cursive;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+// font-family: 'Roboto', sans-serif;
+
+@font-face {
+    font-family: 'tropical_summer_signatureRg';
+    src: url('https://portfolio-seanbuchanan1995351517.codeanyapp.com/wp-content/themes/seanyb/scss/font/tropical_summer_signature/tropical_summer_signature-webfont.woff2') format('woff2'),
+         url('https://portfolio-seanbuchanan1995351517.codeanyapp.com/wp-content/themes/seanyb/scss/font/tropical_summer_signature/tropical_summer_signature-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+// font-family: 'Tropical Summer Signature', cursive;
+
+// colour
+$yellow: #ffc300;
+
+// font styles
+
+h1,h2,h3,p,a {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// font size
+
+:root {
+font-size: 16px;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+// animations
+// @-webkit-keyframes rotation {
+// 		from {
+// 				-webkit-transform: rotate(0deg);
+// 		}
+// 		to {
+// 				-webkit-transform: rotate(359deg);
+// 		}
+// }
+
