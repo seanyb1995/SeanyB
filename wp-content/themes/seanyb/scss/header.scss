@@ -4,6 +4,7 @@ header {
   margin: 0;
   padding: 0;
   position: relative;
+  opacity: 1;
   nav {
     text-align: right;
     ul {
@@ -27,26 +28,65 @@ header {
     }
   }
   .site-branding {
-    h1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 0;
-      padding: 0;
-    }
-    h1:first-child {
-      font-family: 'tropical_summer_signatureRg';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 128px !important;
-      color: $yellow;
-      left: 20px;
-      top: 10px;
-    }
-    h1:nth-child(2) {
-      font-family: 'Rock Salt', cursive;
-      left: 72px;
-      top: 45px;
+    a {
+      text-decoration: none;
+      color: black;
+      h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+      }
+      h1:first-child {
+        font-family: 'tropical_summer_signatureRg';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 128px !important;
+        color: $yellow;
+        left: 20px;
+        top: 10px;
+      }
+      h1:nth-child(2) {
+        font-family: 'Rock Salt', cursive;
+        left: 72px;
+        top: 45px;
+      }
+      p {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: 109px;
+        left: 3.5%;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      p:before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-150%,-50%);
+        background: black;
+      }
+      p:after {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(50%,-50%);
+        background: black;
+      }
     }
   }
+}
+
+header.in-view {
+  opacity: 1;
+  -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 3s;
+  animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 3s;
 }

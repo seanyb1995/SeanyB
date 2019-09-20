@@ -2,37 +2,92 @@
 .banner {
   display: grid;
   grid-template-columns: 1.5fr 4.5fr 4.5fr 1.5fr;
-  grid-template-rows: auto 100vh;
+  grid-template-rows: 10vh auto;
   .image {
     grid-column: 2 / span 2;
     grid-row: 1 / span 1;
     z-index: 1;
     margin: auto;
     text-align: center;
-    img {
-//       animation: rotation 3s infinite linear;
-//       -webkit-animation: rotation 3s infinite linear;
-    }
   }
   .text {
     grid-column: 2 / span 2;
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;
     z-index: 1;
     margin: auto;
     text-align: center;
+    height: 100vh;
+    img:first-child {
+      width: 400px;
+      height: 400px;
+    }
+    img:nth-child(3) {
+      width: auto;
+      height: 250px;
+    }
     h1 {
-      font-size: 3rem;
+      font-size: 2.625rem;
+      line-height: 6rem;
       margin: auto;
+      opacity: 0;
+      -moz-transition: all 1000ms ease-out 3.5s;
+      -webkit-transition: all 1000msms ease-out 3.5s;
+      -o-transition: all 1000msms ease-out 3.5s;
+      transition: all 1000ms ease-out 3.5s;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
       span {
         font-family: verveine, sans-serif;
-        font-weight: 400;
-        font-style: normal;
         color: $yellow;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
         font-size: 3.625rem;
+        transition: 0.5s;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition-delay: 3.5s;
       }
-      span:first-child {
-        font-size: 10rem;
+      span.in-view {
+        transform: scaleX(1);
       }
+      span:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        background: $yellow;
+        transform-origin: right;
+        transition: 0.5s;
+        transition-delay: 4s;
+      }
+      span.in-view:before {
+        transform: scaleX(0);
+        transition-delay: 0.5s;
+        transition-delay: 4s;
+      }
+    }
+    h1.in-view {
+      opacity: 1;
+    }
+    p {
+      font-family: verveine, sans-serif;
+      font-size: 2rem;
+      opacity: 0;
+      -moz-transition: all 1000ms ease-out 6.6s;
+      -webkit-transition: all 1000msms ease-out 6.6s;
+      -o-transition: all 1000msms ease-out 6.6s;
+      transition: all 1000ms ease-out 6.6s;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    p.in-view {
+      opacity: 1;
     }
   }
 }

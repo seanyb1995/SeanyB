@@ -50,15 +50,28 @@ get_header();
         <div class="sub-heading">
           <h3>Some things about me.</h3>
         </div>
+        <!--about image-->
+        <div class="image">
+           <?php
+						$post = 46;
+						if(has_post_thumbnail($post)){
+							the_post_thumbnail();
+						}
+					?>
+        </div>
         <!--about text-->
         <div class="text">
           <?php post_content(46); ?>
         </div>
       </section>
-      <!--skill set-->>
+      <!--skill set-->
       <section class="skill-set">
         <div class="sub-heading">
           <h3>Some things I've learnt.</h3>
+        </div>
+        <!--skills-->
+        <div class="skills">
+          <?php skill_set(); ?>
         </div>
       </section>
 		</main><!-- #main -->

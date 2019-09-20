@@ -12,7 +12,7 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<head>
+<head name="top">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -25,8 +25,11 @@
   
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-      <h1>SB</h1>
-      <h1>Seany.B</h1>
+      <a href="<?php echo get_home_url(); ?>">
+        <h1>SB</h1>
+        <h1>Seany.B</h1>
+        <p>Website Developer</p>
+      </a>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

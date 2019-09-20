@@ -1,10 +1,15 @@
 // case studies 
-.case-studies {
+
+body {
+  overflow-x: hidden;
+}
+
+.content {
   display: grid;
-  grid-template-columns: 1.5fr 9fr 1.5fr;
+  grid-template-columns: 1.5fr 4.5fr 4.5fr 1.5fr;
   grid-template-rows: auto auto;
-  .sub-heading {
-    grid-column: 2 / span 1;
+  .work-heading {
+    grid-column: 2 / span 2;
     grid-row: 1 / span 1;
     h3 {
       font-family: verveine, sans-serif;
@@ -13,22 +18,12 @@
     }
   }
   .projects {
-    grid-column: 2 / span 1;
+    grid-column: 2 / span 2;
     grid-row: 2 / span 1;
     position: relative;
     // odd posts
     .odd {
       position: relative;
-      img {
-        width: 750px;
-        height: 500px;
-        position: absolute;
-        top: 55%;
-        right: 0;
-        z-index: -1;
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-      }
       h3:first-child {
         font-family: gineso-condensed, sans-serif;
         font-weight: 700;
@@ -49,40 +44,54 @@
         background-color: black;
         content: "";
       }
-      h1 {
-        font-size: 4rem;
-        font-family: 'Roboto', sans-serif;
-        color: black;
-        position: relative;
-        display: inline-block;
-        z-index: 1;
-      }
-      h1:after {
-        position: absolute;
-        content: '';
-        display: block;
-        top: 75%;
-        left: -2%;
-        transform: translate(0%,-50%);
-        height: 50%;
-        background: $yellow;
-        width: 104%;
-        z-index: -1;
-      }
-      h1 {
-        font-weight: 500;
-      }
-      h3 {
-        font-size: 2rem;
-        margin: 0;
-      }
-      p {
-        font-size: 1.25rem;
-        color: #aaa;
-        font-weight: 300;
-      }
-      h1,h3,p {
-        font-family: 'Roboto', sans-serif;
+      a {
+        text-decoration: none !important;
+        img {
+          width: 750px;
+          height: 500px;
+          position: absolute;
+          top: 55%;
+          right: 0;
+          z-index: -1;
+          -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+        }
+        h1 {
+          font-size: 4rem;
+          font-family: 'Roboto', sans-serif;
+          color: black;
+          position: relative;
+          display: inline-block;
+          z-index: 1;
+        }
+        h1:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 75%;
+          left: -2%;
+          transform: translate(0%,-50%);
+          height: 50%;
+          background: $yellow;
+          width: 104%;
+          z-index: -1;
+        }
+        h1 {
+          font-weight: 500;
+        }
+        h3 {
+          font-size: 2rem;
+          margin: 0;
+          color: black;
+        }
+        p {
+          font-size: 1.25rem;
+          color: #aaa;
+          font-weight: 300;
+        }
+        h1,h3,p {
+          font-family: 'Roboto', sans-serif;
+        }
       }
     }
     .odd:not(:first-child) {
@@ -91,19 +100,9 @@
     // even posts
     .even {
       position: relative;
-      margin-top: 33vh;
       text-align: right;
-      img {
-        width: 750px;
-        height: 500px;
-        position: absolute;
-        top: 55%;
-        left: 0;
-        z-index: -1;
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-      }
-      h3:nth-child(2) {
+      margin-top: 33vh;
+      h3:first-child {
         font-family: gineso-condensed, sans-serif;
         font-weight: 700;
         font-style: normal;
@@ -111,55 +110,227 @@
         position: relative;
         margin: 0;
         padding: 0;
-        text-align: right;
         -webkit-text-fill-color: white; /* Will override color (regardless of order) */
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
       }
-      h3:nth-child(2):before {
+      h3:first-child:before {
         position: absolute;
         height: 1px;
         width: 25%;
         top: 50%;
-        right: 45%;
+        right: 32%;
         background-color: black;
         content: "";
       }
-      h1 {
-        font-size: 4rem;
-        font-family: 'Roboto', sans-serif;
-        color: black;
-        position: relative;
-        display: inline-block;
-        z-index: 1;
+      a {
+        text-decoration: none !important;
+        img {
+          width: 750px;
+          height: 500px;
+          position: absolute;
+          top: 55%;
+          left: 0;
+          z-index: -1;
+          -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+        }
+        h1 {
+          font-size: 4rem;
+          font-family: 'Roboto', sans-serif;
+          color: black;
+          position: relative;
+          display: inline-block;
+          z-index: 1;
+        }
+        h1:after {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 75%;
+          left: -2%;
+          transform: translate(0%,-50%);
+          height: 50%;
+          background: $yellow;
+          width: 104%;
+          z-index: -1;
+        }
+        h1 {
+          font-weight: 500;
+        }
+        h3 {
+          font-size: 2rem;
+          margin: 0;
+          color: black;
+        }
+        p {
+          font-size: 1.25rem;
+          color: #aaa;
+          font-weight: 300;
+        }
+        h1,h3,p {
+          font-family: 'Roboto', sans-serif;
+        }
       }
-      h1:after {
-        position: absolute;
-        content: '';
-        display: block;
-        top: 75%;
-        left: -2%;
-        transform: translate(0%,-50%);
-        height: 50%;
-        background: $yellow;
-        width: 104%;
-        z-index: -1;
+    }
+    h1,h3,p {
+      opacity: 0;
+      -moz-transition: all 700ms ease-out;
+      -webkit-transition: all 700ms ease-out;
+      -o-transition: all 700ms ease-out;
+      transition: all 700ms ease-out;
+      -moz-transform: translate3d(-1000px, 0px, 0px);
+      -webkit-transform: translate3d(-1000px, 0px, 0px);
+      -o-transform: translate(-1000px, 0px);
+      -ms-transform: translate(-1000px, 0px);
+      transform: translate3d(-1000px, 0px, 0px);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;  
+    }
+    h1.in-view,
+    h3.in-view,
+    p.in-view {
+      opacity: 1;
+      -moz-transform: translate3d(0px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      -o-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+      transform: translate3d(0px, 0px, 0px);
+    }
+    img {
+      opacity: 0;
+      -moz-transition: all 700ms ease-out;
+      -webkit-transition: all 700ms ease-out;
+      -o-transition: all 700ms ease-out;
+      transition: all 700ms ease-out;
+      -moz-transform: translate3d(1000px, 0px, 0px);
+      -webkit-transform: translate3d(1000px, 0px, 0px);
+      -o-transform: translate(1000px, 0px);
+      -ms-transform: translate(1000px, 0px);
+      transform: translate3d(1000px, 0px, 0px);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;  
+    }
+    img.in-view {
+      opacity: 1;
+      -moz-transform: translate3d(0px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      -o-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+      transform: translate3d(0px, 0px, 0px);
+    }
+    .odd {
+      img.animate {
+        transform: scale(1.1);
+        transform-origin:bottom right;
+        filter: grayscale(0%) !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
-      h1 {
-        font-weight: 500;
-      }
-      h3 {
-        font-size: 2rem;
-        margin: 0;
-      }
+      h1,
+      h3,
       p {
-        font-size: 1.25rem;
-        color: #aaa;
-        font-weight: 300;
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
       }
-      h1,h3,p {
-        font-family: 'Roboto', sans-serif;
+      h1.animate,
+      h3.animate,
+      p.animate {
+        transform: scale(1.1);
+        transform-origin:bottom left;
+      }
+      h1.clicked,
+      h3.clicked,
+      p.clicked {
+        opacity: 0;
+      }
+      img.clicked {
+        filter: grayscale(0%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        left: 50%;
+        transform: translate(-50%,0);
+      }
+    }
+    .even {
+      img.animate {
+        transform: scale(1.1);
+        transform-origin:bottom left;
+        filter: grayscale(0%) !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      h1,
+      h3,
+      p {
+        -moz-transition: all 700ms ease-out;
+        -webkit-transition: all 700ms ease-out;
+        -o-transition: all 700ms ease-out;
+        transition: all 700ms ease-out;
+      }
+      h1.animate,
+      h3.animate,
+      p.animate {
+        transform: scale(1.1);
+        transform-origin:bottom right;
       }
     }
   }
+  .sticky-nav {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 5;
+    z-index: 1;
+    text-align: center;
+    svg {
+      width: auto;
+      height: 250px;
+      cursor: pointer;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 25%;
+    }
+    svg.animate {
+      transform: scale(1.1);
+      transform-origin: bottom;
+    }
+    p {
+      font-family: verveine,sans-serif;
+      font-size: 2rem;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 52%;
+      text-align: center;
+      opacity: 0;
+      -moz-transition: all 700ms ease-out 1.2s;
+      -webkit-transition: all 700ms ease-out 1.2s;
+      -o-transition: all 700ms ease-out 1.2s;
+      transition: all 700ms ease-out 1.2s;
+    }
+    p.in-view {
+      opacity: 1;
+    }
+  }
+  .overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red; /* Black background with opacity */
+    transform: scale(0);
+    transform-origin: left;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  }
+  .transition-wipe {
+    transition: .7s cubic-bezier(0, 0, .58, 1);
+    transform: scaleX(0);
+  }
+  html.is-animating .transition-wipe {
+    transform: scaleX(1);
+  }
 }
+

@@ -125,7 +125,21 @@ function seanyb_scripts() {
   wp_enqueue_style( 'style.min', get_template_directory_uri() . '/css/style.min.css' );
 
 	wp_enqueue_script( 'seanyb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+  
+  wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/jquery-3.4.1.min.js', array(), '20190906', true );
+  
+  wp_enqueue_script( 'skill-set', get_template_directory_uri() . '/js/skill-set.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/waypoints.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'home', get_template_directory_uri() . '/js/home.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'load', get_template_directory_uri() . '/js/load.js', array('jQuery'), '20190906', true );
 
+  wp_enqueue_script( 'top-scroll', get_template_directory_uri() . '/js/topscroll.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'case-study', get_template_directory_uri() . '/js/case-study.js', array('jQuery'), '20190906', true );
+  
 	wp_enqueue_script( 'seanyb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

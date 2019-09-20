@@ -15,6 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
+      <?php post_content(87); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
