@@ -140,6 +140,8 @@ function seanyb_scripts() {
   
   wp_enqueue_script( 'case-study', get_template_directory_uri() . '/js/case-study.js', array('jQuery'), '20190906', true );
   
+  wp_enqueue_script( 'single-case-study', get_template_directory_uri() . '/js/single-case-study.js', array('jQuery'), '20190906', true );
+  
 	wp_enqueue_script( 'seanyb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

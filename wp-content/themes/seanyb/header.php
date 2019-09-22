@@ -26,7 +26,6 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
       <a href="<?php echo get_home_url(); ?>">
-        <h1>SB</h1>
         <h1>Seany.B</h1>
         <p>Website Developer</p>
       </a>

@@ -10,13 +10,13 @@
     #head_mask {
       stroke-dasharray: 1273.3;
       stroke-dashoffset: 1273.3;
-      animation: arrow 0.6s linear forwards 0.6s;
+      animation: arrow 0.6s linear forwards 2.6s;
     }
 
     #body_mask {
       stroke-dasharray: 2045.87;
       stroke-dashoffset: 2045.87;
-      animation: arrow 0.6s linear forwards 1.2s;
+      animation: arrow 0.6s linear forwards 3.2s;
     }
 
   </style>

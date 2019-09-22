@@ -1,7 +1,7 @@
 // skill set
 .content {
   .skills-heading {
-    grid-column: 2 / span 1;
+    grid-column: 2 / span 2;
     grid-row: 5 / span 1;
     margin-top: 25vh;
     h3 {
@@ -11,6 +11,9 @@
     }
   }
   .skills {
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+    z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -131,9 +134,6 @@
   .name h4,
   .name p,
   .progress {
-    grid-column: 2 / span 2;
-    grid-row: 6 / span 1;
-    z-index: 1;
     margin: 0;
     margin-top: 0px;
     padding: 0;

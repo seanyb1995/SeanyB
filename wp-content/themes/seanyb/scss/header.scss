@@ -21,7 +21,14 @@ header {
           text-align: center;
           padding: 14px 16px;
           text-decoration: none;
-          font-size: 1.125rem;
+          font-size: 1.25rem;
+          color: #ccc;
+          -moz-transition: all 700ms ease-out;
+          -webkit-transition: all 700ms ease-out;
+          -o-transition: all 700ms ease-out;
+          transition: all 700ms ease-out;
+        }
+        a:hover {
           color: black;
         }
       }
@@ -42,22 +49,17 @@ header {
         font-family: 'tropical_summer_signatureRg';
         font-weight: normal;
         font-style: normal;
-        font-size: 128px !important;
+        font-size: 5rem !important;
         color: $yellow;
         left: 20px;
-        top: 10px;
-      }
-      h1:nth-child(2) {
-        font-family: 'Rock Salt', cursive;
-        left: 72px;
-        top: 45px;
+        top: 20px;
       }
       p {
         position: absolute;
         padding: 0;
         margin: 0;
         top: 109px;
-        left: 3.5%;
+        left: 5.5%;
         text-transform: uppercase;
         font-weight: 500;
       }

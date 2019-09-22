@@ -8,37 +8,37 @@
     #h_mask {
       stroke-dasharray: 457.7;
       stroke-dashoffset: 457.7;
-      animation: hello 0.3s linear forwards;
+      animation: hello 0.3s linear forwards 1s;
     }
 
     #e_mask {
       stroke-dasharray: 166.50;
       stroke-dashoffset: 166.50;
-      animation: hello 0.3s linear forwards .3s;
+      animation: hello 0.3s linear forwards 1.3s;
     }
 
     #l_mask {
       stroke-dasharray: 139.62;
       stroke-dashoffset: 139.62;
-      animation: hello 0.3s linear forwards .6s;
+      animation: hello 0.3s linear forwards 1.6s;
     }
 
     #l2_mask {
       stroke-dasharray: 431.29;
       stroke-dashoffset: 431.29;
-      animation: hello 0.3s linear forwards .9s;
+      animation: hello 0.3s linear forwards 1.9s;
     }
 
     #o_mask {
       stroke-dasharray: 278.24;
       stroke-dashoffset: 278.24;
-      animation: hello 0.3s linear forwards 1.2s;
+      animation: hello 0.3s linear forwards 2.2s;
     }
 
     #__mask {
       stroke-dasharray: 223;
       stroke-dashoffset: 223;
-      animation: hello 0.3s linear forwards 1.5s;
+      animation: hello 0.3s linear forwards 2.5s;
     }
   </style>
   <defs>

@@ -39,7 +39,9 @@ get_header();
       </section>
       <!--content-->
       <section name="work" class="content">
-        <div class="transition-wipe overlay"></div>
+        <!--overlay-->
+        <div class="load-in"></div>
+        <div class="load-out"></div>
         <!--projects-->
         <!--projects heading-->
         <div class="work-heading">
@@ -110,7 +112,7 @@ get_header();
               </g>
             </g>
           </svg>
-          <p>Click to scroll up!</p>
+          <p>Click <br>to <br>scroll <br>up!</p>
         </div>
         <!--case studies content-->
         <div class="projects">

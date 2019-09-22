@@ -1,7 +1,7 @@
 //------------------------------------------------------home page animations--//
 jQuery(document).ready(function($) {
   
-var $animation_elements = $('h1, h3, p, span, img, .text, .image, li, footer');
+var $animation_elements = $('h1, h3, p, span, img, .text, .image, li, footer, img');
                            
 var $window = $(window);
 
