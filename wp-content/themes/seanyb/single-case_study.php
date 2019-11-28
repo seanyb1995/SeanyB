@@ -30,6 +30,9 @@ get_header();
                 <div class="heading">
                   <h1><?php the_title(); ?></h1>
                 </div>
+                <div class="demo">
+                  <a href="#">View Demo</a>
+                </div>
                 <!--project description-->
                 <div class="description">
                   <!--project overview-->
@@ -95,26 +98,76 @@ get_header();
                     </div>
                   </div>
                 </div>
-                <!--divider-->
-                <div class="divider"></div>
               </div>
                 <!--project video render-->
                 <div class="project-video">
                   <video src="/wp-content/themes/seanyb/videos/showreel.mkv" type="video/x-matroska;" controls></video>
                 </div>
-                <!--project process-->
-                <div class="project-process">
-                    <div class="process">
+                 <!--project process-->
+                <div class="process">
+                  <div class="content">
+                    <div class="text">
+                      <div class="features">
+                        <h3>Features</h3>
+                        <ul>
+                          <li>User Authentication</li>
+                          <li>Password Recovery</li>
+                          <li>Login Preservation</li>
+                          <li>Geolocation</li>
+                          <li>Distance Calculator</li>
+                          <li>Time Calculator</li>
+                        </ul>
+                      </div>
+                      <div class="challenges">
+                        <h3>Challenges</h3>
+                        <ol>
+                          <li>First time using google maps API, found it difficult initially due to the learning curve.</li>
+                          <li>First time developing a web based mobile application, trying to limit the amount of pages to create a more impressive experience without overloading the browser with data.</li>
+                          <li>Implementing hand gesture into the design to mimic a native mobile applicaiton.</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="image">
+                      <!--project plan-->
+                      <div class="plan">
+                        <!--wireframe-->
+                        <div class="wireframe">
+                          <h3>Wireframe</h3>
+                          <div class="placeholder"></div>
+                        </div>
+                        <div class="mockup">
+                          <h3>Mockup</h3>
+                          <div class="placeholder"></div>
+                        </div>
+                        <div class="development">
+                          <h3>Development</h3>
+                          <div class="placeholder"></div>
+                        </div>
+                      </div> 
+                    </div>
                   </div>
+                <!--divider-->
+                <div class="divider"></div>
+                <!--learn-->
+                <div class="learn">
+
+                  <h3>Some things I learnt</h3>
+
+                  <!--learnt-->
+                  <div class="learnt">
+
+                    <ul>
+
+                      <li><i class="fas fa-tasks"></i><a>Individual Project Management</a></li>
+                      <li><i class="fab fa-google"></i><a>Google MAP API</a></li>
+                      <li><i class="fas fa-mobile"></i><a>Mobile Application Development</a></li>
+                      <li><i class="fas fa-hand-point-up"></i><a>Interactive Design</a></li>
+
+                    </ul>
+
+                  </div>
+
                 </div>
-                <!--project screen wireframes-->
-                <div class="project-wireframes">
-                </div>
-                <!--project screen renders-->
-                <div class="project-screens">
-                </div>
-                <div class="project-other">
-                  <h3>Some other things.</h3>
                 </div>
               </section>
           <?php 
