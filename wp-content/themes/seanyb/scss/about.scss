@@ -1,53 +1,43 @@
 // about 
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
 .content {
+  
   .about-heading {
     grid-column: 2 / span 2;
     grid-row: 3 / span 1;
-    margin-top: 33vh;
+    
     h3 {
       font-family: verveine, sans-serif;
       color: $yellow;
       font-size: 3.625rem;
+      
     }
   }
+  
   .image {
     grid-column: 2 / span 1;
     grid-row: 4 / span 1;
-    opacity: 0;
-    -moz-transition: all 700ms ease-out;
-    -webkit-transition: all 700ms ease-out;
-    -o-transition: all 700ms ease-out;
-    transition: all 700ms ease-out;
-    -moz-transform: translate3d(-1000px, 0px, 0px);
-    -webkit-transform: translate3d(-1000px, 0px, 0px);
-    -o-transform: translate(-1000px, 0px);
-    -ms-transform: translate(-1000px, 0px);
-    transform: translate3d(-1000px, 0px, 0px);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
     img {
       width: 75%;
       height: auto;
-      margin-top: 4rem;
     }
+    
   }
+  
   .text {
     grid-column: 3 / span 1;
     grid-row: 4 / span 1;
-    opacity: 0;
-    -moz-transition: all 700ms ease-out;
-    -webkit-transition: all 700ms ease-out;
-    -o-transition: all 700ms ease-out;
-    transition: all 700ms ease-out;
-    -moz-transform: translate3d(1000px, 0px, 0px);
-    -webkit-transform: translate3d(1000px, 0px, 0px);
-    -o-transform: translate(1000px, 0px);
-    -ms-transform: translate(1000px, 0px);
-    transform: translate3d(1000px, 0px, 0px);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;  
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap; 
+    
     h1 {
       font-family: 'Roboto', sans-serif;
       font-size: 4rem;
@@ -55,7 +45,9 @@
       position: relative;
       display: inline-block;
       z-index: 1;
+      
     }
+    
     h1:after {
       position: absolute;
       content: '';
@@ -68,51 +60,147 @@
       width: 104%;
       z-index: -1;
     }
-    p {
-      font-size: 1.25rem;
-    }
-    a {
-      color: black;
-      text-decoration: none;
-      border-bottom: 2px solid $yellow;
-    }
-    h3 {
-      font-size: 2rem;
-      font-weight: 500;
-      a {
-        text-decoration: none;
-        border-bottom: none;
+    
+    .wrap {
+      
+      blockquote {
+        font-size: 2rem;
         position: relative;
-        font-weight: 500;
+        font-family: verveine, sans-serif;
+      }
+
+      blockquote:before {
+        position: absolute;
+        content: "-";
+        color: black;
+        font-size: 5rem;
+        transform: translate(-140%, -30%);
+        font-family: verveine, sans-serif;
+        opacity: 0.2;
+      }
+
+      blockquote:after {
+        position: absolute;
+        content: "”";
+        color: black;
+        font-size: 10rem;
+        transform: translate(0,-50%);
+        font-family: verveine, sans-serif;
+        opacity: 0.2;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      p:nth-child(2) {
+        margin-top: 50px;
+      }
+
+      a {
+        position: relative;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: verveine, sans-serif;
+        font-size: 1.625rem;
+      }
+      
+      a:before,
+      a:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0; right: 0;
+        height: 2px;
+        background-color: $yellow;
+      }
+      
+      a:before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
       }
       a:after {
-        position: absolute;
-        content: '';
-        display: block;
-        top: 75%;
-        left: 0;
-        transform: translate(0%,-50%);
-        height: 30%;
-        background: $yellow;
-        width: 100%;
-        z-index: -1;
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;   
       }
+      a:hover,
+      a:focus {
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+           transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+           transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        
+      }
+      
     }
+    
+    .resume {
+      
+      p {
+        
+        #resume {
+          text-decoration: none;
+          color: black;
+          position: relative;
+          border: none;
+          border: 2px solid #ffc300;
+          padding: 12px 24px;
+          cursor: pointer;
+          background: none;
+          font-family: 'Roboto', sans-serif;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 600;
+          transition:         0.3s ease-in;
+          -o-transition:      0.3s ease-in;
+          -ms-transition:     0.3s ease-in;
+          -moz-transition:    0.3s ease-in;
+          -webkit-transition: 0.3s ease-in;
+          margin-left: 20px;
+        }
+
+        #resume:before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f0e0";
+          margin-right: 10px;
+        }
+
+        #resume:after {
+          content: "";
+          position: absolute;
+          background: #ffc300;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 100%;
+          z-index: -1;
+          -webkit-transition: top 0.1s ease-in; 
+        }
+
+        #resume:hover {
+          color: white;
+        }
+
+        #resume:hover:after {
+          top: 0;
+        }
+        
+      }
+      
+    }
+    
   }
-  .text.in-view {
-    opacity: 1;
-    -moz-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -o-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-  }
-  .image.in-view {
-    opacity: 1;
-    -moz-transform: translate3d(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    -o-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-  }
+  
 }

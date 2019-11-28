@@ -136,11 +136,13 @@ function seanyb_scripts() {
   
   wp_enqueue_script( 'load', get_template_directory_uri() . '/js/load.js', array('jQuery'), '20190906', true );
 
-  wp_enqueue_script( 'top-scroll', get_template_directory_uri() . '/js/topscroll.js', array('jQuery'), '20190906', true );
+  wp_enqueue_script( 'scroll', get_template_directory_uri() . '/js/scroll.js', array('jQuery'), '20190906', true );
   
   wp_enqueue_script( 'case-study', get_template_directory_uri() . '/js/case-study.js', array('jQuery'), '20190906', true );
   
   wp_enqueue_script( 'single-case-study', get_template_directory_uri() . '/js/single-case-study.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'Fontawesome', get_template_directory_uri() . '/js/fontawesome/css/all.css', array(), '20190906', true );
   
 	wp_enqueue_script( 'seanyb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

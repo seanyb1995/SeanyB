@@ -1,10 +1,13 @@
 // header
 // navigation 
 header {
+  width: 100%;
   margin: 0;
   padding: 0;
-  position: relative;
+  position: fixed;
   opacity: 1;
+  padding: 24px 24px;
+  z-index: 2;
   nav {
     text-align: right;
     ul {
@@ -13,29 +16,108 @@ header {
       padding: 0;
       overflow: hidden;
       width: 90%;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
       li {
         display: inline-block;
         a {
+          font-family: 'Roboto', sans-serif;
           position: relative;
           display: block;
           text-align: center;
           padding: 14px 16px;
           text-decoration: none;
           font-size: 1.25rem;
-          color: #ccc;
+          color: black;
           -moz-transition: all 700ms ease-out;
           -webkit-transition: all 700ms ease-out;
           -o-transition: all 700ms ease-out;
           transition: all 700ms ease-out;
+          text-transform: uppercase;
         }
+        
+      }
+      #menu-item-145,
+      #menu-item-146,
+      #menu-item-152,
+      #menu-item-206 {
+        a:after {
+          position: absolute;
+          content: "";
+          display: block;
+          top: 50%;
+          left: -2%;
+          transform: translate(0%, -50%);
+          height: 25%;
+          background: #ffc300;
+          width: 100%;
+          z-index: -1;
+          transition: 0.3s all ease-in;
+          transform-origin: left;
+          transform: scaleX(0);
+        }
+        a:hover:after { 
+          transform: scaleX(1);
+        }
+      }
+      #menu-item-214 {
+        margin-left: 20px;
+        a {
+          font-family: "Roboto",sans-serif;
+          position: relative;
+          text-decoration: none;
+          padding: 12px 24px;
+          border: 2px solid #ffc300;
+          text-transform: uppercase;
+          font-weight: 600;
+          color:
+          #000;
+          overflow: hidden;
+          transition: .3s ease-in;
+          -o-transition: .3s ease-in;
+          -ms-transition: .3s ease-in;
+          -moz-transition: .3s ease-in;
+          -webkit-transition: .3s ease-in;
+          cursor: pointer;
+        }
+      }
+      #menu-item-214 {
+        a:before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f15b";
+          margin-right: 10px;
+        }
+      }
+      #menu-item-214 {
+        a:after {
+          content: "";
+          position: absolute;
+          background: #ffc300;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 100%  !important;
+          z-index: -1;
+          -webkit-transition: top .1s ease-in;
+        }
+      }
+      #menu-item-214 {
         a:hover {
-          color: black;
+          color: white;
+        }
+      }
+      #menu-item-214 {
+        a:hover:after {
+          top: 0 !important;
         }
       }
     }
   }
   .site-branding {
     a {
+      position: relative;
       text-decoration: none;
       color: black;
       h1 {
@@ -51,8 +133,8 @@ header {
         font-style: normal;
         font-size: 5rem !important;
         color: $yellow;
-        left: 20px;
-        top: 20px;
+        left: 24px;
+        top: 5px;
       }
       p {
         position: absolute;
@@ -63,32 +145,21 @@ header {
         text-transform: uppercase;
         font-weight: 500;
       }
-      p:before {
-        content: '';
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-150%,-50%);
-        background: black;
-      }
-      p:after {
-        content: '';
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(50%,-50%);
-        background: black;
-      }
     }
   }
 }
 
 header.in-view {
   opacity: 1;
-  -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 3s;
-  animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 3s;
+//   -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 3s;
+//   animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 3s;
+}
+
+header.in-view.slide-out {
+    -webkit-animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+header.in-view.slide-in {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

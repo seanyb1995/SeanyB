@@ -1,0 +1,50 @@
+// banner
+.banner {
+  display: grid;
+  grid-template-columns: 1.5fr 4.5fr 4.5fr 1.5fr;
+  grid-template-rows: 10vh auto;
+  .image {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    z-index: 1;
+    margin: auto;
+    text-align: center;
+  }
+  .text {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+    z-index: 1;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      font-size: 2rem;
+      line-height: 6rem;
+      margin: auto;
+      opacity: 1;
+      span {
+        font-family: verveine, sans-serif;
+        color: $yellow;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        font-size: 3.625rem;
+      }
+    }
+    p {
+      font-family: verveine, sans-serif;
+      font-size: 2rem;
+      opacity: 1;
+    }
+  }
+}
+
+#paper {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}

@@ -18,32 +18,83 @@ if ( ! function_exists( 'case_studies' ) ) {
   
   $case_studies = new WP_Query($args);
   if( $case_studies->have_posts() ): ?>
-    <?php $i = 1; ?>
     <?php while($case_studies->have_posts()): $case_studies->the_post(); ?>
       <?php if ($case_studies->current_post % 2 != 0): ?>
-              <!--even-->
-                <div class="even">
-                  <h3>0<?php echo $i ?></h3>
-                  <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail( array( 750,500) ); ?>
-                    <h1 data-title="<?php the_title(); ?>"><?php the_title(); ?></h1>
-                    <h3><?php echo get_field('business'); ?></h3>
-                    <p><?php echo get_field('format'); ?></p>
-                  </a>
-                </div>
-          <?php $i++; ?>
-          <?php else: ?>
-              <!--odd-->
-              <div class="odd">
-                <h3>0<?php echo $i ?></h3>
-                  <a href="<?php the_permalink(); ?>">
-                  <h1 data-title="<?php the_title(); ?>"><?php the_title(); ?></h1>
-                  <h3><?php echo get_field('business'); ?></h3>
-                  <p><?php echo get_field('format'); ?></p>
-                  <?php the_post_thumbnail( array( 750,500) ); ?>
-                </a>
-              </div>
-      <?php $i++; ?>
+
+        <!--project-->
+        <div class="project">
+          <!--image-->
+          <div class="image">
+            <!--project placeholder-->
+            <div class="placeholder <?php echo get_field('placeholder'); ?>">
+            </div>
+          </div>
+          <!--text-->
+          <div class="text">
+            <!--project heading-->
+            <div class="heading">
+              <h1><?php the_title(); ?></h1>
+              <h3><?php echo get_field('business'); ?></h3>
+            </div>
+            <!--project description-->
+            <div class="description">
+              <!--features-->
+              <?php
+              $tags = get_field('tags');
+              if( $tags ): ?>
+              <ul>
+                  <?php foreach( $tags as $tag ): ?>
+                      <li><?php echo $tag; ?></li>
+                  <?php endforeach; ?>
+              </ul>
+              <?php endif; ?>
+              <p><?php the_content(); ?></p>
+            </div>
+            <div class="links">
+              <a href="<?php the_permalink(); ?>">View Project</a>
+              <a onclick="window.open('<?php echo get_field('github_url'); ?>');">View Code</a>
+            </div>
+          </div>
+        </div>
+
+        <?php else: ?>
+
+        <!--project-->
+        <div class="project">
+          <!--text-->
+          <div class="text">
+            <!--project heading-->
+            <div class="heading">
+              <h1><?php the_title(); ?></h1>
+              <h3><?php echo get_field('business'); ?></h3>
+            </div>
+            <!--project description-->
+            <div class="description">
+              <!--features-->
+              <?php
+              $tags = get_field('tags');
+              if( $tags ): ?>
+              <ul>
+                  <?php foreach( $tags as $tag ): ?>
+                      <li><?php echo $tag; ?></li>
+                  <?php endforeach; ?>
+              </ul>
+              <?php endif; ?>
+              <p><?php the_content(); ?></p>
+            </div>
+            <div class="links">
+              <a href="<?php the_permalink(); ?>">View Project</a>
+              <a onclick="window.open('<?php echo get_field('github_url'); ?>');">View Code</a>
+            </div>
+          </div>
+          <!--image-->
+          <div class="image">
+            <!--project placeholder-->
+            <div class="placeholder <?php echo get_field('placeholder'); ?>">
+            </div>
+          </div>
+        </div>
+
       <?php endif ?>
     <?php endwhile ?>
   <?php endif ?>
