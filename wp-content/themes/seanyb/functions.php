@@ -124,9 +124,9 @@ function seanyb_scripts() {
   
   wp_enqueue_style( 'style.min', get_template_directory_uri() . '/css/style.min.css' );
   
-  wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.css');
+  wp_enqueue_style( 'owl-carousel-min-css', get_template_directory_uri() . '/owlcarousel/owl.carousel.css');
   
-  wp_enqueue_style( 'owl-theme-carousel', get_template_directory_uri() . '/owlcarousel/owl.theme.default.min.css');
+  wp_enqueue_style( 'owl-theme-carousel-css', get_template_directory_uri() . '/owlcarousel/owl.theme.default.css');
 
 	wp_enqueue_script( 'seanyb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
   
@@ -147,6 +147,8 @@ function seanyb_scripts() {
   wp_enqueue_script( 'single-case-study', get_template_directory_uri() . '/js/single-case-study.js', array('jQuery'), '20190906', true );
   
   wp_enqueue_script( 'owl-carousel-jquery', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owlcarousel.js', array('jQuery'), '20190906', true );
   
 	wp_enqueue_script( 'seanyb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
