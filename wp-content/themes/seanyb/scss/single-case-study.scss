@@ -765,6 +765,20 @@
       }
 
     }
+    
+    .other {
+      display: flex;
+      flex-direction: column;
+      grid-column: 2 / span 2;
+      grid-row: 5 / span 1;
+      
+      h3 {
+      font-family: verveine,sans-serif;
+      color: $yellow;
+      font-size: 3.625rem;
+      }
+
+    }
 
   }
   

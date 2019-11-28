@@ -138,7 +138,7 @@ get_header();
                           <h3>Wireframe</h3>
                             <div class="placeholder">
                               <!-- Set up your HTML -->
-                              <div class="owl-carousel">
+                              <div class="owl-carousel popup-gallery">
                               <?php
                                 //Get the images ids from the post_metadata
                                 $images = acf_photo_gallery('wireframes', $post->ID);
@@ -157,7 +157,7 @@ get_header();
                                         $class = get_field('photo_gallery_class', $id); //Get the class which is a extra field (See below how to add extra fields)
                                 ?>
                                 <?php if( !empty($url) ){ ?><a href="<?php echo $url; ?>" <?php echo ($target == 'true' )? 'target="_blank"': ''; ?>><?php } ?>
-                                  <img class="image-module" src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+                                  <img class="image-module" href="<?php echo $full_image_url; ?>" src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
                                 <?php if( !empty($url) ){ ?></a><?php } ?>
                               <?php endforeach; endif; ?>
                               </div>
@@ -228,25 +228,23 @@ get_header();
                 <div class="divider"></div>
                 <!--learn-->
                 <div class="learn">
-
                   <h3>Some things I learnt</h3>
-
                   <!--learnt-->
-                  <div class="learnt">
-
-                    <ul>
-
-                      <li><i class="fas fa-tasks"></i><a>Individual Project Management</a></li>
-                      <li><i class="fab fa-google"></i><a>Google MAP API</a></li>
-                      <li><i class="fas fa-mobile"></i><a>Mobile Application Development</a></li>
-                      <li><i class="fas fa-hand-point-up"></i><a>Interactive Design</a></li>
-
-                    </ul>
-
+                    <div class="learnt">
+                      <ul>
+                        <li><i class="fas fa-tasks"></i><a>Individual Project Management</a></li>
+                        <li><i class="fab fa-google"></i><a>Google MAP API</a></li>
+                        <li><i class="fas fa-mobile"></i><a>Mobile Application Development</a></li>
+                        <li><i class="fas fa-hand-point-up"></i><a>Interactive Design</a></li>
+                      </ul>
+                    </div>
                   </div>
-
-                </div>
-                  
+                  <!--divider-->
+                  <div class="divider"></div>
+                  <!--other projects-->
+                  <div class="other">
+                    <h3>Some other things</h3>
+                  </div>
                 </div>
               </section>
           <?php 

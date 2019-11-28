@@ -124,6 +124,8 @@ function seanyb_scripts() {
   
   wp_enqueue_style( 'style.min', get_template_directory_uri() . '/css/style.min.css' );
   
+  wp_enqueue_style( 'magnific-popup-css', get_template_directory_uri() . '/magnificpopup/magnific-popup.css');
+  
   wp_enqueue_style( 'owl-carousel-min-css', get_template_directory_uri() . '/owlcarousel/owl.carousel.css');
   
   wp_enqueue_style( 'owl-theme-carousel-css', get_template_directory_uri() . '/owlcarousel/owl.theme.default.css');
@@ -149,6 +151,10 @@ function seanyb_scripts() {
   wp_enqueue_script( 'owl-carousel-jquery', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js', array('jQuery'), '20190906', true );
   
   wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owlcarousel.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'magnific-popup-js', get_template_directory_uri() . '/magnificpopup/jquery.magnific-popup.js', array('jQuery'), '20190906', true );
+  
+  wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/js/magnific-popup.js', array('jQuery'), '20190906', true );
   
 	wp_enqueue_script( 'seanyb-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
